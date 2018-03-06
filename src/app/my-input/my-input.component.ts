@@ -15,7 +15,6 @@ export class MyInputComponent implements OnInit {
   }
 
   ngOnInit() {
-  	console.info(this.fieldKey);
   }
 
 }

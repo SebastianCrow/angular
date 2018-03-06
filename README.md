@@ -3,7 +3,7 @@ Docs: https://angular.io/guide/quickstart
 
 - template error handling & debuging
 - adding service multiple times in providers create multiple instances!
-
+- "shadow DOM"
 
 
 ------------------------------------------------------------------------------------------------------
