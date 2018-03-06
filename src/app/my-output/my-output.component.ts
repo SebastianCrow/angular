@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Renderer2, ElementRef} from '@angular/core';
 import {InputOutputService} from "../input-output-service/input-output.service";
 
 @Component({
@@ -12,7 +12,12 @@ export class MyOutputComponent implements OnInit {
 		return this.InputOutputService.highlighted ? 'orange' : 'black';
 	}
 
-	constructor(private InputOutputService: InputOutputService) { }
+	constructor(private InputOutputService: InputOutputService,
+	            private element: ElementRef,
+	            private renderer: Renderer2) {
+
+//		renderer.setStyle(element.nativeElement, "background-color", "orange");
+	}
 
 	ngOnInit() {
 	}
