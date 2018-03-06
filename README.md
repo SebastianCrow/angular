@@ -1,5 +1,12 @@
 Docs: https://angular.io/guide/quickstart
 
+ng-bootstrap:
+https://github.com/ng-bootstrap/ng-bootstrap
+https://ng-bootstrap.github.io/#/getting-started
+
+ngx-bootstrap:
+https://github.com/valor-software/ngx-bootstrap
+https://valor-software.com/ngx-bootstrap/#/getting-started
 
 - template error handling & debuging
 - adding service multiple times in providers create multiple instances!

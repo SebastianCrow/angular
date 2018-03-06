@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { AppComponent } from './app.component';
 import { MyInputComponent } from './my-input/my-input.component';
 import { MyOutputComponent } from './my-output/my-output.component';
@@ -21,7 +23,8 @@ import { MyTwoWayComponent } from './my-two-way/my-two-way.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    NgbModule.forRoot()
   ],
   providers: [InputOutputService],
   bootstrap: [AppComponent]
