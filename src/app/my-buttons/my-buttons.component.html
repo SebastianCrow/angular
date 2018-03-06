@@ -2,8 +2,14 @@
 
 
 <div>
-	<button class="btn btn-lg btn-outline-primary">Change Color Of Name</button>
-	<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Show Modal With Full Name</button>
+	<button class="btn btn-lg btn-outline-primary"
+	        (click)="InputOutputService.highlighted = !InputOutputService.highlighted">
+		Change Color Of Name
+	</button>
+	<button class="btn btn-lg btn-outline-primary"
+	        (click)="open(content)">
+		Show Modal With Full Name
+	</button>
 	<div>
 		{{closeResult}}
 	</div>

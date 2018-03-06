@@ -8,9 +8,12 @@ import {InputOutputService} from "../input-output-service/input-output.service";
 })
 export class MyOutputComponent implements OnInit {
 
-  constructor(private InputOutputService: InputOutputService) { }
+	public get color(): string {
+		return this.InputOutputService.highlighted ? 'orange' : 'black';
+	}
 
-  ngOnInit() {
-  }
+	constructor(private InputOutputService: InputOutputService) { }
 
+	ngOnInit() {
+	}
 }

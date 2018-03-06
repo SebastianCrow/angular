@@ -18,10 +18,17 @@ export class MyButtonsComponent implements OnInit {
 
 	public open(content) {
 		this.modalService.open(content).result.then((result) => {
-			this.closeResult = `Closed with: ${result}`;
+			this.clearName();
+			this.closeResult = `Name cleared. Closed with: ${result}`;
 		}, (reason) => {
-			this.closeResult = `Dismissed ${MyButtonsComponent.getDismissReason(reason)}`;
+			this.clearName();
+			this.closeResult = `Name cleared. Dismissed ${MyButtonsComponent.getDismissReason(reason)}`;
 		});
+	}
+
+	private clearName(): void {
+		this.InputOutputService.firstName = "";
+		this.InputOutputService.lastName = "";
 	}
 
 	private static getDismissReason(reason: any): string {
