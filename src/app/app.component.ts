@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+	title = 'app';
+
+	public field: string;
+
+	public changeField(): void {
+		this.field = "App Component";
+	}
 }

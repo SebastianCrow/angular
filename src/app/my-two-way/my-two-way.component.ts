@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'my-two-way',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyTwoWayComponent implements OnInit {
 
-  constructor() { }
+	@Input()
+	public field: string;
 
-  ngOnInit() {
-  }
+	@Output()
+	public fieldChange: EventEmitter<string> = new EventEmitter<string>();
 
+	constructor() { }
+
+	ngOnInit() {
+	}
+
+	public changeField(): void {
+		this.field = "My Two Way Component";
+		this.fieldChange.emit(this.field);
+	}
 }

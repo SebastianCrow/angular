@@ -1,4 +1,19 @@
+<!--Input-->
 <my-inputs></my-inputs>
+
+<!--Output-->
 <my-output></my-output>
+
+<!--Actions-->
 <my-buttons></my-buttons>
-<my-two-way></my-two-way>
+
+<!--Two-way binding-->
+<my-two-way [(field)]="field"></my-two-way>
+<button class="btn btn-outline-primary form-group"
+        (click)="changeField()">
+	Change From Parent Component
+</button>
+<div>
+	Value in parent component:
+	<strong>{{field}}</strong>
+</div>
