@@ -11,6 +11,14 @@ https://valor-software.com/ngx-bootstrap/#/getting-started
 - template error handling & debuging
 - adding service multiple times in providers create multiple instances!
 - "shadow DOM"
+- lifecycle (https://angular.io/guide/lifecycle-hooks)
+
+Migration:
+https://angular.io/guide/upgrade
+
+
+
+
 
 
 ------------------------------------------------------------------------------------------------------

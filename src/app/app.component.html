@@ -13,8 +13,8 @@
         (click)="changeField()">
 	Change From Parent Component
 </button>
-<div>
-	Value in parent component:
+<div myDirective [color]="'orange'">
+	<span>Value in parent component:</span>
 	<strong>{{field}}</strong>
 </div>
 
