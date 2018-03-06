@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class InputOutputService {
 
-  public firstName: string = "";
-  public lastName: string = "";
+  public firstName: string = "Simple";
+  public lastName: string = "Joe";
 
   public get fullName(): string
   {

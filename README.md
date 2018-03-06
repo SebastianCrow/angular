@@ -1,3 +1,13 @@
+Docs: https://angular.io/guide/quickstart
+
+
+- template error handling & debuging
+- adding service multiple times in providers create multiple instances!
+
+
+
+------------------------------------------------------------------------------------------------------
+
 # Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
