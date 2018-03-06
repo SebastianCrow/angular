@@ -10,11 +10,10 @@ export class MyInputComponent implements OnInit {
 
 	@Input() public fieldKey: string;
 
-  constructor(private InputOutputService: InputOutputService) {
+	constructor(private InputOutputService: InputOutputService) {
+	}
 
-  }
-
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
 }

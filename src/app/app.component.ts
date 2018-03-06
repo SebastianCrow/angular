@@ -13,4 +13,8 @@ export class AppComponent {
 	public changeField(): void {
 		this.field = "App Component";
 	}
+
+	public showAlert(): void {
+		alert("Thank You!");
+	}
 }

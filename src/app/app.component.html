@@ -17,3 +17,36 @@
 	Value in parent component:
 	<strong>{{field}}</strong>
 </div>
+
+<hr>
+
+<div *ngIf="false">
+	<h3>Other</h3>
+
+	<!--if-->
+	<h4>if</h4>
+	<div *ngIf="true">I'm alive!</div>
+
+	<!--if else-->
+	<h4>if else</h4>
+	<div *ngIf="false;then content else other_content">here is ignored</div>
+
+	<ng-template #content>if content here...</ng-template>
+	<ng-template #other_content>else content here...</ng-template>
+
+	<!--show-->
+	<h4>show</h4>
+	<div [hidden]="true">Something</div>
+
+	<!--for-->
+	<h4>for</h4>
+	<div *ngFor="let item of [1, 2, 3]">{{item}}</div>
+
+	<!--style-->
+	<h4>style</h4>
+	<div [style.font-size.px]="50">I'm big!</div>
+
+	<!--click-->
+	<h4>click</h4>
+	<div (click)="showAlert()">Click Me!</div>
+</div>
