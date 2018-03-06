@@ -1,10 +1,26 @@
 <h3>Actions</h3>
 
-<div class="btn-group btn-group-toggle">
-	<label class="btn-primary" ngbButtonLabel>
-		<input type="checkbox" ngbButton> Change Color Of Name
-	</label>
-	<label class="btn-primary" ngbButtonLabel>
-		<input type="checkbox" ngbButton> Show Modal With Full Name
-	</label>
+
+<div>
+	<button class="btn btn-lg btn-outline-primary">Change Color Of Name</button>
+	<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Show Modal With Full Name</button>
+	<div>
+		{{closeResult}}
+	</div>
 </div>
+
+<!--Modal-->
+<ng-template #content let-c="close" let-d="dismiss">
+	<div class="modal-header">
+		<h4 class="modal-title">Your name is</h4>
+		<button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<p>{{InputOutputService.fullName}}</p>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+	</div>
+</ng-template>
