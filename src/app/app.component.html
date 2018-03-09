@@ -1,20 +1,52 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!--Input-->
+<my-inputs></my-inputs>
 
+<!--Output-->
+<my-output></my-output>
+
+<!--Actions-->
+<my-buttons></my-buttons>
+
+<!--Two-way binding-->
+<my-two-way [(field)]="field"></my-two-way>
+<button class="btn btn-outline-primary form-group"
+        (click)="changeField()">
+	Change From Parent Component
+</button>
+<div myDirective [color]="'orange'">
+	<span>Value in parent component:</span>
+	<strong>{{field}}</strong>
+</div>
+
+<hr>
+
+<div *ngIf="false">
+	<h3>Other</h3>
+
+	<!--if-->
+	<h4>if</h4>
+	<div *ngIf="true">I'm alive!</div>
+
+	<!--if else-->
+	<h4>if else</h4>
+	<div *ngIf="false;then content else other_content">here is ignored</div>
+
+	<ng-template #content>if content here...</ng-template>
+	<ng-template #other_content>else content here...</ng-template>
+
+	<!--show-->
+	<h4>show</h4>
+	<div [hidden]="true">Something</div>
+
+	<!--for-->
+	<h4>for</h4>
+	<div *ngFor="let item of [1, 2, 3]">{{item}}</div>
+
+	<!--style-->
+	<h4>style</h4>
+	<div [style.font-size.px]="50">I'm big!</div>
+
+	<!--click-->
+	<h4>click</h4>
+	<div (click)="showAlert()">Click Me!</div>
+</div>
